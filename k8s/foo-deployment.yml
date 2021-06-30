@@ -14,11 +14,10 @@ spec:
     spec:
       containers:
         - name: foo-app
-          image: image_name
+          image: robinnagpal/argo-learning-foo-app:edba18e
           env:
             - name: APP_NAME
               value: foo
-
 ---
 apiVersion: v1
 kind: Service
@@ -31,3 +30,7 @@ spec:
   ports:
     - port: 3000
       targetPort: 3000
+  template:
+    spec:
+      containers:
+        - image: robinnagpal/argo-learning-foo-app:edba18e
