@@ -1,33 +1,33 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bar-backend-deployment
+  name: foo-backend-deployment
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: bar-app
+      app: foo-app
   template:
     metadata:
       labels:
-        app: bar-app
+        app: foo-app
     spec:
       containers:
-        - name: bar-app
-          image: robinnagpal/kubernetes-tutorial-003-node-app:latest
+        - name: foo-app
+          image: image_name
           env:
             - name: APP_NAME
-              value: bar
+              value: foo
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: bar-app-service
+  name: foo-app-service
 spec:
   type: NodePort
   selector:
-    app: bar-app
+    app: foo-app
   ports:
     - port: 3000
       targetPort: 3000
