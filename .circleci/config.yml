@@ -28,7 +28,7 @@ jobs:
           command: echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
       - add_ssh_keys:
           fingerprints:
-            - "7a:90:b4:49:73:b4:d6:0c:99:7d:d5:3c:4f:f3:b5:2f"
+            - "26:d9:56:12:e5:f8:e2:52:8a:f8:58:65:28:77:ec:a5"
       - run:
           name: Git Config
           command: git config user.email "circleci@jomo.clicl" && git config user.name "Circle"
