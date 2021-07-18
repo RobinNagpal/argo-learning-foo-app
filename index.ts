@@ -13,7 +13,7 @@ const server = createServer((request: IncomingMessage, response: ServerResponse)
           process.exit(1);
         }
         response.setHeader("Connection", "close");
-        response.end(`Hello world ${counter} from ${hostname()}, from app ${process.env.APP_NAME}. Version - 1.0.0`);
+        response.end(`Hello world ${counter} from ${hostname()}, from app ${process.env.APP_NAME}. Version - 1.0.1`);
       }
 
       break;
